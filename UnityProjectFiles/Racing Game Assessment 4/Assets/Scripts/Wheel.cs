@@ -37,6 +37,7 @@ public class Wheel : MonoBehaviour
         if(_Power)
         {
             _WheelCollider.motorTorque = _Torque;
+            
         }
     }
 }
