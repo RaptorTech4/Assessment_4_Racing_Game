@@ -208,7 +208,7 @@ WheelCollider:
     damper: 500
     targetPosition: 0.5
   m_SuspensionDistance: 0.2
-  m_ForceAppPointDistance: 0.05
+  m_ForceAppPointDistance: 1
   m_Mass: 50
   m_WheelDampingRate: 0.56
   m_ForwardFriction:
@@ -239,6 +239,7 @@ MonoBehaviour:
   _Steer: 1
   _InvertSteer: 0
   _Power: 0
+  _Brake: 0
 --- !u!1 &2681796245849674417
 GameObject:
   m_ObjectHideFlags: 0
@@ -489,6 +490,7 @@ MonoBehaviour:
   _Steer: 0
   _InvertSteer: 0
   _Power: 1
+  _Brake: 1
 --- !u!1 &5252116350867963562
 GameObject:
   m_ObjectHideFlags: 0
@@ -557,6 +559,7 @@ MonoBehaviour:
   _CenterOfMass: {fileID: 8694883418092451213}
   _MotorTorque: 1000
   _MaxSteer: 20
+  _BrakeTorque: 2000
 --- !u!65 &1502122325
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -893,6 +896,7 @@ MonoBehaviour:
   _Steer: 0
   _InvertSteer: 0
   _Power: 1
+  _Brake: 1
 --- !u!1 &6848227458255098663
 GameObject:
   m_ObjectHideFlags: 0
@@ -1015,7 +1019,7 @@ WheelCollider:
     damper: 500
     targetPosition: 0.5
   m_SuspensionDistance: 0.2
-  m_ForceAppPointDistance: 0.05
+  m_ForceAppPointDistance: 1
   m_Mass: 50
   m_WheelDampingRate: 0.56
   m_ForwardFriction:
@@ -1046,6 +1050,7 @@ MonoBehaviour:
   _Steer: 1
   _InvertSteer: 0
   _Power: 0
+  _Brake: 0
 --- !u!1 &8691457211614323362
 GameObject:
   m_ObjectHideFlags: 0
