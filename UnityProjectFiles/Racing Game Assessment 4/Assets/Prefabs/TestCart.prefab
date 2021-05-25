@@ -209,7 +209,7 @@ WheelCollider:
     targetPosition: 0.5
   m_SuspensionDistance: 0.2
   m_ForceAppPointDistance: 0.05
-  m_Mass: 20
+  m_Mass: 50
   m_WheelDampingRate: 0.56
   m_ForwardFriction:
     m_ExtremumSlip: 0.4
@@ -459,7 +459,7 @@ WheelCollider:
     targetPosition: 0.5
   m_SuspensionDistance: 0.2
   m_ForceAppPointDistance: 0.05
-  m_Mass: 20
+  m_Mass: 50
   m_WheelDampingRate: 0.56
   m_ForwardFriction:
     m_ExtremumSlip: 0.4
@@ -500,9 +500,10 @@ GameObject:
   - component: {fileID: 4875308577531700240}
   - component: {fileID: 5887585975017639541}
   - component: {fileID: 4604056297382326686}
+  - component: {fileID: 1502122325}
   m_Layer: 0
   m_Name: TestCart
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -554,8 +555,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _CenterOfMass: {fileID: 8694883418092451213}
-  _MotorTorque: 500
+  _MotorTorque: 1000
   _MaxSteer: 20
+--- !u!65 &1502122325
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5252116350867963562}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.1, y: 0.1, z: 0.1}
+  m_Center: {x: 0, y: 0.5, z: 0}
 --- !u!1 &5511946651444411189
 GameObject:
   m_ObjectHideFlags: 0
@@ -849,7 +863,7 @@ WheelCollider:
     targetPosition: 0.5
   m_SuspensionDistance: 0.2
   m_ForceAppPointDistance: 0.05
-  m_Mass: 20
+  m_Mass: 50
   m_WheelDampingRate: 0.56
   m_ForwardFriction:
     m_ExtremumSlip: 0.4
@@ -1002,7 +1016,7 @@ WheelCollider:
     targetPosition: 0.5
   m_SuspensionDistance: 0.2
   m_ForceAppPointDistance: 0.05
-  m_Mass: 20
+  m_Mass: 50
   m_WheelDampingRate: 0.56
   m_ForwardFriction:
     m_ExtremumSlip: 0.4

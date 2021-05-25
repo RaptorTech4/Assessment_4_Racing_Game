@@ -8,9 +8,11 @@ public class Wheel : MonoBehaviour
     public bool _Steer;
     public bool _InvertSteer;
     public bool _Power;
+    public bool _Brake;
 
     public float _SteerAngle { get; set; }
     public float _Torque { get; set; }
+    public float _BrakeTorque { get; set; }
 
     private WheelCollider _WheelCollider;
     private Transform _WheelTransform;
@@ -36,8 +38,14 @@ public class Wheel : MonoBehaviour
         }
         if(_Power)
         {
-            _WheelCollider.motorTorque = _Torque;
-            
+            if(_WheelCollider.isGrounded)
+            {
+                _WheelCollider.motorTorque = _Torque;
+            }
+        }
+        if(_Brake)
+        {
+            _WheelCollider.brakeTorque = _BrakeTorque;
         }
     }
 }

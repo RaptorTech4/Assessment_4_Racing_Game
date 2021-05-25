@@ -8,9 +8,11 @@ public class KartController : MonoBehaviour
     public Transform _CenterOfMass;
     public float _MotorTorque = 1500f;
     public float _MaxSteer = 20f;
+    public float _BrakeTorque = 2000f;
 
     public float _Steer { get; set; }
     public float _Throttle { get; set; }
+    public float _Brake { get; set; }
 
     private Rigidbody _RB;
     private Wheel [] _Wheels;
@@ -27,11 +29,20 @@ public class KartController : MonoBehaviour
 
         _Steer = GameManager._Instance._InputController._SteerInput;
         _Throttle = GameManager._Instance._InputController._ThottelInput;
-
+        _Brake = GameManager._Instance._InputController._BrakeInput;
+        if(_Throttle == 0.0F)
+        {
+            _RB.drag = 1.0f;
+        }
+        else
+        {
+            _RB.drag = 0.0f;
+        }
         foreach (var wheel in _Wheels)
         {
             wheel._SteerAngle = _Steer * _MaxSteer;
             wheel._Torque = _Throttle * _MotorTorque;
+            wheel._BrakeTorque = _Brake * _BrakeTorque;
         }
     }
 }
