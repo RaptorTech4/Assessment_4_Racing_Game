@@ -36,6 +36,7 @@ public class CheckPoints : MonoBehaviour
                 }
                 else
                 {
+                    
                     _LapesDone++;
                     _NextCheckpoint.SetActive(true);
                     gameObject.SetActive(false);

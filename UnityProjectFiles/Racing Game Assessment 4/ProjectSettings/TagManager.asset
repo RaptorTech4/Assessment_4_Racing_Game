@@ -11,12 +11,12 @@ TagManager:
   - Ground
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Track
+  - PostProcessing
+  - Environment
+  - CrashObject
+  - Kart
+  - TrainingCheckpoints
   - 
   - 
   - 

@@ -30,14 +30,7 @@ public class KartController : MonoBehaviour
         _Steer = GameManager._Instance._InputController._SteerInput;
         _Throttle = GameManager._Instance._InputController._ThottelInput;
         _Brake = GameManager._Instance._InputController._BrakeInput;
-        if(_Throttle == 0.0F)
-        {
-            _RB.drag = 1.0f;
-        }
-        else
-        {
-            _RB.drag = 0.0f;
-        }
+        _RB.drag = _RB.velocity.magnitude / 250;
         foreach (var wheel in _Wheels)
         {
             wheel._SteerAngle = _Steer * _MaxSteer;
