@@ -119,8 +119,6 @@ namespace KartGame.KartSystems
         public GameObject DriftTrailPrefab;
         [Range(-0.1f, 0.1f), Tooltip("Vertical to move the trails up or down and ensure they are above the ground.")]
         public float DriftTrailVerticalOffset;
-        [Tooltip("VFX that will spawn upon landing, after a jump.")]
-        public GameObject JumpVFX;
         [Tooltip("VFX that is spawn on the nozzles of the kart.")]
         public GameObject NozzleVFX;
         [Tooltip("List of the kart's nozzles.")]
@@ -175,7 +173,7 @@ namespace KartGame.KartSystems
         bool m_HasCollision;
         bool m_InAir = false;
 
-        public void AddPowerup(StatPowerup statPowerup) => m_ActivePowerupList.Add(statPowerup);
+       public void AddPowerup(StatPowerup statPowerup) => m_ActivePowerupList.Add(statPowerup);
         public void SetCanMove(bool move) => m_CanMove = move;
         public float GetMaxSpeed() => Mathf.Max(m_FinalStats.TopSpeed, m_FinalStats.ReverseSpeed);
 
@@ -351,13 +349,6 @@ namespace KartGame.KartSystems
             }
         }
 
-        public void Reset()
-        {
-            Vector3 euler = transform.rotation.eulerAngles;
-            euler.x = euler.z = 0f;
-            transform.rotation = Quaternion.Euler(euler);
-        }
-
         public float LocalSpeed()
         {
             if (m_CanMove)
@@ -458,7 +449,6 @@ namespace KartGame.KartSystems
                 if (m_InAir)
                 {
                     m_InAir = false;
-                    Instantiate(JumpVFX, transform.position, Quaternion.identity);
                 }
 
                 // manual angular velocity coefficient
