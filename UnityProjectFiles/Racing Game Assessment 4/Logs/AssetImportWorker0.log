@@ -299,3 +299,76 @@ Received Import Request.
 Start importing Assets/Scenes/Track 3.unity using Guid(d5203bad248f5044888d756fa9fbee8e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c1627b87b717b018ee23c782525749fa') in 0.006356 seconds
   Import took 0.012148 seconds .
 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002809 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.40 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.208 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.56 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2001 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 97.8 MB.
+System memory in use after: 97.9 MB.
+
+Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 2503.
+Total: 3.115100 ms (FindLiveObjects: 0.597400 ms CreateObjectMapping: 0.326700 ms MarkObjects: 2.154500 ms  DeleteObjects: 0.034300 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 452.135998 seconds.
+  path: Assets/Scenes/Track 1.unity
+  artifactKey: Guid(b3fdb2d19bc203f41bf21d91ba6c58f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Track 1.unity using Guid(b3fdb2d19bc203f41bf21d91ba6c58f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0bf9a0c053ff83084a85dc56ae19088d') in 0.017062 seconds
+  Import took 0.020625 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 24.018642 seconds.
+  path: Assets/Scenes/Track 2.unity
+  artifactKey: Guid(d606481b251fd2142b8f91db067d1055) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Track 2.unity using Guid(d606481b251fd2142b8f91db067d1055) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aa1a3c019c3e1d381e18401d9e543182') in 0.002485 seconds
+  Import took 0.033002 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 195.352184 seconds.
+  path: Assets/Scenes/Track 3.unity
+  artifactKey: Guid(d5203bad248f5044888d756fa9fbee8e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Track 3.unity using Guid(d5203bad248f5044888d756fa9fbee8e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9d9b62b2e09e0fdfcbe4d7bb4b2c7e6c') in 0.008223 seconds
+  Import took 0.013342 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003606 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.53 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.269 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.49 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2001 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 97.9 MB.
+System memory in use after: 98.0 MB.
+
+Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 2506.
+Total: 4.530500 ms (FindLiveObjects: 0.201200 ms CreateObjectMapping: 0.083300 ms MarkObjects: 4.222800 ms  DeleteObjects: 0.021400 ms)
+
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
