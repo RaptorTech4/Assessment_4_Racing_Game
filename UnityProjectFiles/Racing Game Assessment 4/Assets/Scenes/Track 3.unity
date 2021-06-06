@@ -310,7 +310,7 @@ Transform:
   m_LocalScale: {x: 200, y: 1, z: 200}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1992686298
 PrefabInstance:
@@ -323,6 +323,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerKart
       objectReference: {fileID: 0}
+    - target: {fileID: 4549699913795493209, guid: 9f614cd28c6145044b33207b79574df9, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: d8500ab8b188c9e4fa3d851658c5a3b9, type: 2}
     - target: {fileID: 4616236723780180144, guid: 9f614cd28c6145044b33207b79574df9, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -381,15 +385,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5743757646983941414, guid: 9f614cd28c6145044b33207b79574df9, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.27740628
+      value: 0.2774063
       objectReference: {fileID: 0}
     - target: {fileID: 5743757646983941414, guid: 9f614cd28c6145044b33207b79574df9, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.000000009082549
+      value: 0.0000000019049249
       objectReference: {fileID: 0}
     - target: {fileID: 5743757646983941414, guid: 9f614cd28c6145044b33207b79574df9, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.0000000026224816
+      value: -5.500253e-10
       objectReference: {fileID: 0}
     - target: {fileID: 5743757647150266098, guid: 9f614cd28c6145044b33207b79574df9, type: 3}
       propertyPath: m_LocalPosition.y
@@ -405,15 +409,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5743757647150266098, guid: 9f614cd28c6145044b33207b79574df9, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.27740628
+      value: 0.2774063
       objectReference: {fileID: 0}
     - target: {fileID: 5743757647150266098, guid: 9f614cd28c6145044b33207b79574df9, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.000000009082549
+      value: 0.0000000019049249
       objectReference: {fileID: 0}
     - target: {fileID: 5743757647150266098, guid: 9f614cd28c6145044b33207b79574df9, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.0000000026224816
+      value: -5.500253e-10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9f614cd28c6145044b33207b79574df9, type: 3}
