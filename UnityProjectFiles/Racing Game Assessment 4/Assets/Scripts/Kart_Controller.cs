@@ -12,6 +12,11 @@ public class Kart_Controller : MonoBehaviour
     public WheelCollider _WheelRR;
 
     [Space]
+    [Header("Components")]
+    public Rigidbody _RB;
+    public Transform _CenterOfMass;
+
+    [Space]
     [Header("Controls")]
     public float _TopSpeed = 300.0f;
     public float _CurrentSpeed;
@@ -21,18 +26,7 @@ public class Kart_Controller : MonoBehaviour
     public float _SpeedMultiplier = 2.5f;
 
     [Space]
-    [Header("Input Names")]
-    public string _ForwardAxes;
-    public string _TurnAxes;
-    public string _BrakeAxes;
-
-    [Space]
-    [Header("Components")]
-    public Rigidbody _RB;
-    public Vector3 _CenterOfMass;
-
-    [Space]
-    [Header("Racing Info")]
+    [Header("Lap Info")]
     public int _CurrentLap;
     public int _CurrentChekpoint;
     public int _CurrntPlace;
@@ -46,9 +40,8 @@ public class Kart_Controller : MonoBehaviour
 
     private void Start()
     {
-
         _RB = GetComponent<Rigidbody>();
-        _RB.centerOfMass = _CenterOfMass;
+        _RB.centerOfMass = _CenterOfMass.localPosition;
 
         _CurrentLap = 1;
         _CurrentChekpoint = 0;
@@ -56,6 +49,7 @@ public class Kart_Controller : MonoBehaviour
 
     private void FixedUpdate()
     {
+
         
 
         //wheel steering

@@ -32,6 +32,18 @@ public class Way_Point_Holder : MonoBehaviour
             if (i > 0)
             {
                 previousNode = nodes[i - 1].position;
+
+                if(nodes[i].GetComponent<Lap_CheckPont>())
+                {
+                    Lap_CheckPont updateIndext = nodes[i].GetComponent<Lap_CheckPont>();
+
+                    updateIndext._Index = i + 1;
+                }
+                else if(nodes[i].GetComponent<Lap_Counter>())
+                {
+                    Lap_Counter lapUpdater = nodes[i].GetComponent<Lap_Counter>();
+                    lapUpdater._TotalCheckPoints = nodes.Count - 1;
+                }
             }
             else if (i == 0 && nodes.Count > 1)
             {

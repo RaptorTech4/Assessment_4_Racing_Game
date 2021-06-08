@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Lap_checkPoint : MonoBehaviour
+public class Lap_Counter : MonoBehaviour
 {
 
     public int _TotalCheckPoints;
