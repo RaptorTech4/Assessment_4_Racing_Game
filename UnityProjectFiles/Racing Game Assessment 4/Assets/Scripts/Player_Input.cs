@@ -9,6 +9,9 @@ public class Player_Input : MonoBehaviour
 
     Kart_Controller kart;
 
+    [HideInInspector]
+    public bool StopMoving = false;
+
     private void Start()
     {
         kart = GetComponent<Kart_Controller>();
@@ -16,10 +19,10 @@ public class Player_Input : MonoBehaviour
 
     private void FixedUpdate()
     {
-        kart._forward = Input.GetAxis(_ForwardAxes);
-        kart._turn = Input.GetAxis(_TurnAxes);
-        kart._brake = Input.GetAxis(_BrakeAxes);
 
+        kart._forward = (StopMoving) ? 0.0f : Input.GetAxis(_ForwardAxes);
+        kart._turn = (StopMoving) ? 0.0f : Input.GetAxis(_TurnAxes);
+        kart._brake = (StopMoving) ? 1.0f : Input.GetAxis(_BrakeAxes);
 
     }
 }
