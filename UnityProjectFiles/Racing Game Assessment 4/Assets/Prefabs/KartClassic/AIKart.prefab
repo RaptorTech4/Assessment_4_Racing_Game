@@ -353,10 +353,10 @@ MonoBehaviour:
   _WheelRR: {fileID: 875884988765533523}
   _RB: {fileID: 9158131829510621709}
   _CenterOfMass: {fileID: 4775511540231926810}
-  _TopSpeed: 300
+  _TopSpeed: 150
   _CurrentSpeed: 0
   _MaxTorque: 280
-  _MaxSteerAngle: 25
+  _MaxSteerAngle: 35
   _MaxBrakeTorque: 2000
   _SpeedMultiplier: 2.5
   _CurrentLap: 0
@@ -377,9 +377,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6fdc0d738e9a704597e8e358a1eb98d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _Speed: 0.5
+  _CurrentSpeed: 0.25
   _Path: {fileID: 0}
-  _NodeDis: 5
+  _NodeDis: 10
   _TurnSpeed: 5
   _SensorLenth: 15
   _FrontVectorPos: {x: 0.5, y: 0.5, z: 0}

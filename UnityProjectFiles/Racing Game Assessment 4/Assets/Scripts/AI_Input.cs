@@ -5,7 +5,7 @@ public class AI_Input : MonoBehaviour
 {
 
     Kart_Controller _kart;
-    public float _Speed = 0.5f;
+    public float _CurrentSpeed = 0.5f;
 
     public Transform _Path;
     public float _NodeDis = 0.5f;
@@ -51,12 +51,12 @@ public class AI_Input : MonoBehaviour
 
         _kart._brake = 0.0f;
 
-        WayPointCheck();
+        //WayPointCheck();
     }
 
     void DriveAI()
     {
-        _kart._forward = _Speed;
+        _kart._forward = _CurrentSpeed;
     }
 
     void SteerAI()
@@ -67,26 +67,30 @@ public class AI_Input : MonoBehaviour
         }
         else
         {
+            Kart_Controller kart = GetComponent<Kart_Controller>();
+
+            _CurrentNode = kart._CurrentChekpoint;
+
             Vector3 relativeVector = transform.InverseTransformPoint(nodes[_CurrentNode].position);
             float steerAmount = (relativeVector.x / relativeVector.magnitude);
             _TargetTurnAngel = steerAmount;
         }
     }
 
-    void WayPointCheck()
-    {
-        if (Vector3.Distance(transform.position, nodes[_CurrentNode].position) < _NodeDis)
-        {
-            if (_CurrentNode == nodes.Count - 1)
-            {
-                _CurrentNode = 0;
-            }
-            else
-            {
-                _CurrentNode++;
-            }
-        }
-    }
+    //void WayPointCheck()
+    //{
+    //    if (Vector3.Distance(transform.position, nodes[_CurrentNode].position) < _NodeDis)
+    //    {
+    //        if (_CurrentNode == nodes.Count - 1)
+    //        {
+    //            _CurrentNode = 0;
+    //        }
+    //        else
+    //        {
+    //            _CurrentNode++;
+    //        }
+    //    }
+    //}
 
     void Check()
     {
@@ -101,7 +105,7 @@ public class AI_Input : MonoBehaviour
 
         // right
         sensorStartPos += transform.right * _FrontSensorPos;
-        if (Physics.Raycast(sensorStartPos, transform.forward, out hit, _SensorLenth))
+        if (Physics.Raycast(sensorStartPos, transform.right, out hit, _SensorLenth))
         {
             if (hit.collider.tag == "Obstacle" || hit.collider.tag == "Kart" && hit.collider != this)
             {
@@ -123,7 +127,7 @@ public class AI_Input : MonoBehaviour
 
         // left
         sensorStartPos -= transform.right * _FrontSensorPos * 2;
-        if (Physics.Raycast(sensorStartPos, transform.forward, out hit, _SensorLenth))
+        if (Physics.Raycast(sensorStartPos, -transform.right, out hit, _SensorLenth))
         {
             if (hit.collider.tag == "Obstacle" || hit.collider.tag == "Kart" && hit.collider != this)
             {
@@ -161,6 +165,8 @@ public class AI_Input : MonoBehaviour
                     {
                         _AvoidMulti = 1.0f;
                     }
+
+                   
                 }
             }
         }
