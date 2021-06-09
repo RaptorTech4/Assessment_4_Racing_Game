@@ -167,7 +167,6 @@ namespace KartGame.KartSystems
         Vector3 m_LastValidPosition;
         Vector3 m_LastCollisionNormal;
         bool m_HasCollision;
-        bool m_InAir = false;
 
         public void AddPowerup(StatPowerup statPowerup) => m_ActivePowerupList.Add(statPowerup);
         public void SetCanMove(bool move) => m_CanMove = move;
@@ -519,10 +518,6 @@ namespace KartGame.KartSystems
 
                 // rotate our velocity based on current steer value
                 Rigidbody.velocity = Quaternion.AngleAxis(turningPower * Mathf.Sign(localVel.z) * velocitySteering * m_CurrentGrip * Time.fixedDeltaTime, transform.up) * Rigidbody.velocity;
-            }
-            else
-            {
-                m_InAir = true;
             }
 
             bool validPosition = false;
