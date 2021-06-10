@@ -37,7 +37,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="C:\Users\benne\OneDrive\Documents\aie\Assessment_4_Racing_Game\UnityProjectFiles\KartProject\venv"
+VIRTUAL_ENV="D:\Projects\Assessment_4_Racing_Game\UnityProjectFiles\KartProject\venv"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
