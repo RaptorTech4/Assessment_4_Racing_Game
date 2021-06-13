@@ -12,6 +12,12 @@ EditorBuildSettings:
     path: Assets/Scene/Track 1.unity
     guid: 0c040aec830927a44815aba9b4c82399
   - enabled: 1
+    path: Assets/Scene/Track 2.unity
+    guid: 01715fb400c085f418d63dda63b29482
+  - enabled: 1
+    path: Assets/Scene/Track 3.unity
+    guid: 3b5c50e5dafba804fb409613bf55da53
+  - enabled: 1
     path: Assets/Karting/Scenes/LoseScene.unity
     guid: 9c449e01147824b419cda406398fb2e7
   - enabled: 1

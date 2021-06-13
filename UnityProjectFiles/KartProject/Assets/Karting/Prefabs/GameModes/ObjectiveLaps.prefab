@@ -50,11 +50,11 @@ MonoBehaviour:
   description: Laps
   isOptional: 0
   delayVisible: 5
-  isTimed: 0
-  totalTimeInSecs: 100
+  isTimed: 1
+  totalTimeInSecs: 120
   displayMessage: {fileID: 1902712905063461278}
-  lapsToComplete: 1
-  notificationLapsRemainingThreshold: 1
+  lapsToComplete: 3
+  notificationLapsRemainingThreshold: 0
 --- !u!114 &1902712905063461278
 MonoBehaviour:
   m_ObjectHideFlags: 0

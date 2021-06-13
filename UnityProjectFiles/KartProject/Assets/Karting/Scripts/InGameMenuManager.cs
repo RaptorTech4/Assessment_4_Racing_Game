@@ -13,8 +13,6 @@ public class InGameMenuManager : MonoBehaviour
     public Toggle shadowsToggle;
     [Tooltip("Toggle component for framerate display")]
     public Toggle framerateToggle;
-    [Tooltip("GameObject for the controls")]
-    public GameObject controlImage;
 
     //PlayerInputHandler m_PlayerInputsHandler;
     FramerateCounter m_FramerateCounter;
@@ -42,11 +40,6 @@ public class InGameMenuManager : MonoBehaviour
         if (Input.GetButtonDown(GameConstants.k_ButtonNamePauseMenu)
             || (menuRoot.activeSelf && Input.GetButtonDown(GameConstants.k_ButtonNameCancel)))
         {
-            if (controlImage.activeSelf)
-            {
-                controlImage.SetActive(false);
-                return;
-            }
 
             SetPauseMenuActivation(!menuRoot.activeSelf);
 
@@ -105,8 +98,4 @@ public class InGameMenuManager : MonoBehaviour
         m_FramerateCounter.uiText.gameObject.SetActive(newValue);
     }
 
-    public void OnShowControlButtonClicked(bool show)
-    {
-        controlImage.SetActive(show);
-    }
 }
